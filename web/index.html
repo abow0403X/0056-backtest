@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0056 Backtest</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; }
+        input[type="number"] { width: 80px; }
+        .result { margin-top: 2rem; }
+        table { border-collapse: collapse; margin-top: 1rem; max-width: 100%; overflow-x: auto; }
+        th, td { border: 1px solid #ccc; padding: 4px 8px; font-size: 0.9rem; }
+        th { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>0056 Backtesting Tool</h1>
+    <form id="backtest-form">
+        <label>Buy KD Upper Limit: <input type="number" name="buy_kd_upper" value="80" step="1" min="0" max="100" required></label>
+        <label>Buy RSI Upper Limit: <input type="number" name="buy_rsi_upper" value="75" step="1" min="0" max="100" required></label>
+        <label>Sell KD Lower Limit: <input type="number" name="sell_kd_lower" value="15" step="1" min="0" max="100" required></label>
+        <label>Sell RSI Lower Limit: <input type="number" name="sell_rsi_lower" value="25" step="1" min="0" max="100" required></label>
+        <label><input type="checkbox" name="sell_price_above_avg" checked> Sell when price >= 3% above average</label>
+        <label><input type="checkbox" name="enable_ma_filter" checked> Enable MA Filter</label>
+        <label>KD Period Days: <input type="number" name="kd_period" value="12" step="1" min="1" required></label>
+        <label>KD D-Value Smoothing Days: <input type="number" name="kd_smooth" value="3" step="1" min="1" required></label>
+        <label><input type="checkbox" name="allow_loss_sell" checked> Allow loss sell</label>
+        <label>Units to buy per trade: <input type="number" name="buy_units_each_time" value="1" step="1" min="1" max="10" required></label>
+        <button type="submit">Run Backtest</button>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
