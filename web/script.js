@@ -1,5 +1,7 @@
 // 0056 Backtest JavaScript
+
 //
+
 // This script loads five years of historical price data for the 0056 ETF
 // from a JSON file and implements technical indicator computations and
 // backtesting logic entirely in the browser.  Users can adjust strategy
