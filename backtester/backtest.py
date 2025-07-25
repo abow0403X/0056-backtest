@@ -1,4 +1,5 @@
 """
+
 Backtesting engine for Yuanta/P‑shares Taiwan Dividend Plus ETF (ticker 0056).
 
 This module implements a simple position‑based backtester tailored to the rules
@@ -463,3 +464,5 @@ def export_results_to_excel(
         details_path = os.path.join(output_dir, f"{prefix}_best_details.xlsx")
         details_data.to_excel(details_path, index=False)
     return all_results_path, top_results_path, details_path
+https://github.com/abow0403X/0056-backtest/edit/main/web/script.js
+https://github.com/abow0403X/0056-backtest/edit/main/web/script.js
